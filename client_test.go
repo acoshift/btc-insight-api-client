@@ -7,10 +7,12 @@ import (
 	btcinsightapiclient "github.com/acoshift/btc-insight-api-client"
 )
 
-const apiURL = "https://cashexplorer.bitcoin.com/api"
+// const apiURL = "https://insight.bitpay.com/api" // BTC
+
+const apiURL = "https://cashexplorer.bitcoin.com/api" // BCH
 
 func TestSyncHeight(t *testing.T) {
-	txs, err := btcinsightapiclient.SyncHeight(apiURL, 517200)
+	txs, err := btcinsightapiclient.SyncHeight(apiURL, 508994)
 	if err != nil {
 		t.Fatal(err)
 	}
